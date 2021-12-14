@@ -1,0 +1,100 @@
+/* Home styling starts here */
+
+.home .available-products {
+    padding: 12px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.home .available-products h2 {
+    width: 30%;
+    padding: 5px 0;
+    border-bottom: 3px solid #000000;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.home .sort {
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.home .sort span {
+    color: #696a9e;
+    text-align: end;
+    font-size: 15px;
+}
+
+.home .products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.home .products li {
+    box-sizing: border-box;
+    width: 48%;
+    min-height: 275px;
+    max-height: 275px;
+    padding: 0 1%;
+    border: 1px solid #88888890;
+    margin: 14px 0;
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px 1px #aaaaaaa2;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.home .products li:hover { box-shadow: 0 0 10px 1px #888888a2; }
+
+.home .products figure { width: 38%;}
+
+.home .products li > div { 
+    width: 55%;
+    min-height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home .products li img {
+    min-height: 250px;
+    max-height: 250px;
+}
+
+.home .products h4 {
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.home .products button {
+    padding: 5px 5%;
+    border: 0;
+    border-radius: 2px;
+    background-color: #dde1ff;
+    text-transform: capitalize;
+}
+
+.home .products button:hover { background-color: #d4d9ff;}
+
+.home .products h5 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #035f00;
+}
+
+.home .products h6 {
+    color: #30303094;
+    text-align: right;
+    font-weight: 500;
+}
+
+/* Home styling ends here */

@@ -1,9 +1,18 @@
 import '../assets/css/App.css';
+import Home from './Home';
 
-function App() {
+const App = () => {
+
   return (
     <div className="App">
-      
+      <header>
+        <div className="wrapper">
+          <h1>E-Commerce</h1>
+        </div>
+      </header>
+      <main>
+        <Home />
+      </main>
     </div>
   );
 }
