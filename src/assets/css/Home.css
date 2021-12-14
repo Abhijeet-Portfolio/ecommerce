@@ -16,6 +16,7 @@
 }
 
 .home .sort {
+    width: 50%;
     min-height: 50px;
     display: flex;
     flex-direction: column;
@@ -26,6 +27,12 @@
     color: #696a9e;
     text-align: end;
     font-size: 15px;
+    text-transform: capitalize;
+}
+
+.home .sort button { 
+    width: 14%;
+    align-self: flex-end;
 }
 
 .home .products {

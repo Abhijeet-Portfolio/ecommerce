@@ -8,6 +8,10 @@ const productReducer = ( state = initialState, action = {}) => {
             return {
                 array: action.payload
             }
+        case 'SORT':
+            return {
+                array: state.array.filter(element => element.category === action.payload)
+            }
         default: 
             return state;
     }

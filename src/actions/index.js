@@ -12,3 +12,10 @@ export const setProduct = products => {
         payload: products
     }
 }
+
+export const sortProduct = category => {
+    return {
+        type: 'SORT',
+        payload: category
+    }
+}

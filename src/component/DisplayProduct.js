@@ -7,7 +7,7 @@ const DisplayProduct = ({key,product,sortValue}) => {
             <div>
                 <h4>{product.title}</h4>
                 <div>
-                    <span>Category : </span> <button>{product.category}</button>
+                    <span>Category : </span> <button onClick={() => sortValue(product.category)}>{product.category}</button>
                 </div>     
                 <h5>&#8377; {product.price}</h5>
                 <h6><span>Rating :</span> {product.rating.rate}</h6>
