@@ -2,7 +2,6 @@ export const fetchProduct = () => {
     return async function (dispatch) {
         const response = await fetch(`https://fakestoreapi.com/products`);
         const data = await response.json();
-        console.log(data);
         dispatch(setProduct(data));
     }
 }
@@ -18,5 +17,17 @@ export const sortProduct = category => {
     return {
         type: 'SORT',
         payload: category
+    }
+}
+
+export const increment = () => {
+    return {
+        type: 'INCREMENT'
+    }
+}
+
+export const decrement = () => {
+    return {
+        type: 'DECREMENT'
     }
 }

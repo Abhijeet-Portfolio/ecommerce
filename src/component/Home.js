@@ -17,8 +17,8 @@ const Home = () => {
     }, []);
     
     const sort = value => {
-        if(!category.includes((' > '+value))) {
-            setcategory([...category,(' > '+value)]);
+        if(!category.includes((value))) {
+            setcategory([...category,value]);
             dispatch(sortProduct(value));
         }
     }
@@ -46,7 +46,10 @@ const Home = () => {
                 <div className='available-products'>
                     <h2>Available Products</h2>
                     <div className="sort">
-                        <span>{category.map(catg => catg)}</span>
+                        <span>{category.map((catg,index) => {
+                            if(index === 0) return catg;
+                            return ' > ' + catg;
+                        })}</span>
                         <button onClick={() => clearSort()}>Clear Sort</button>
                     </div>
                 </div>
