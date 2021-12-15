@@ -1,7 +1,6 @@
-const DisplayProduct = ({id,product,sortValue}) => {
-    console.log(id);
+const DisplayProduct = ({product,sortValue}) => {
     return (
-        <li key={id}>
+        <>
             <figure>
                 <img src={product.image} alt={product.title} />
             </figure>
@@ -11,9 +10,9 @@ const DisplayProduct = ({id,product,sortValue}) => {
                     <span>Category : </span> <button onClick={() => sortValue(product.category)}>{product.category}</button>
                 </div>     
                 <h5>&#8377; {product.price}</h5>
-                <h6><span>Rating :</span> {product.rating.rate}</h6>
+                <h6>Rating : {product.rating.rate}</h6>
             </div>
-        </li>
+        </>
     )
 }
 
