@@ -38,7 +38,7 @@ const Home = () => {
                 </div>
                 <ul className='products'>
                     {getProducts.map((product,key) => (
-                        <DisplayProduct key={key} product={product} sortValue={(value) => sort(value)} />
+                        <DisplayProduct id={key} product={product} sortValue={(value) => sort(value)} />
                     ))}
                 </ul>
             </div>

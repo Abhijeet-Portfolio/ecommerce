@@ -1,6 +1,7 @@
-const DisplayProduct = ({key,product,sortValue}) => {
+const DisplayProduct = ({id,product,sortValue}) => {
+    console.log(id);
     return (
-        <li key={key}>
+        <li key={id}>
             <figure>
                 <img src={product.image} alt={product.title} />
             </figure>
