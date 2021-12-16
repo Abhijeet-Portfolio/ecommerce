@@ -39,7 +39,7 @@ const Home = () => {
         });
         if(element) observer.current.observe(element);
     },[])
-
+    
     return (
         <section className="home">
             <div className="wrapper">

@@ -22,9 +22,6 @@ const App = () => {
           </nav>
         </div>
       </header>
-      <main>
-       
-      </main>
     </div>
   );
 }
