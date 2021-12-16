@@ -5,7 +5,8 @@ import { applyMiddleware, createStore } from "redux";
 import { Provider } from "react-redux";
 import reduxThunk from "redux-thunk";
 import "./assets/css/index.css";
-import Home from './component/Home';
+import Home from "./component/Home";
+import ContactForm from "./component/ContactForm";
 import allReducers from "./reducers";
 import App from "./component/App";
 import reportWebVitals from "./reportWebVitals";
@@ -18,8 +19,8 @@ ReactDOM.render(
       <Provider store={store}>
         <App />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/contact' element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<ContactForm />} />
         </Routes>
       </Provider>
     </Router>
