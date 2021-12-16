@@ -31,3 +31,10 @@ export const decrement = () => {
         type: 'DECREMENT'
     }
 }
+
+export const addUser = value => {
+    return {
+        type: 'ADD_USER',
+        payload: value
+    }
+}

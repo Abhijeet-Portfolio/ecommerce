@@ -102,4 +102,22 @@
 
 .contact-form .modal button:hover { background-color: #0067bb;}
 
+/* media query for 995px starts here */
+
+@media only screen and (max-width: 720px) {
+    .contact-form h2 { width: 40%;}
+    .contact-form form { width: 60%;}
+}
+
+/* media query for 995px ends here */
+
+/* media query for 425px starts here */
+
+@media only screen and (max-width: 426px) {
+    .contact-form h2 { width: 60%;}
+    .contact-form form { width: 90%;}
+}
+
+/* media query for 425px ends here */
+
 /* ContactForm styling Ends here */
