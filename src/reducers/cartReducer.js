@@ -1,9 +1,17 @@
-const cartReducer = ( state = 0, action = {}) => {
+const initialState = {
+    array: []
+}
+
+const cartReducer = ( state = initialState, action = {}) => {
     switch(action.type) {
         case 'INCREMENT':
-            return state + 1
+            return {
+                array: [...state.array,action.payload]
+            }
         case 'DECREMENT':
-            return state - 1
+            return {
+                array: state.array.filter(element => element !== action.payload)
+            }
         default: 
             return state;
     }

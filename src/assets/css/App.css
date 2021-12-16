@@ -45,6 +45,22 @@ header nav > div img { width: 70%;}
 header nav .link { color: #eeeeee; }
 header nav .link:hover { border-bottom: 1px solid #f5f5f5;}
 
+/* media query for 720px starts here */
+
+@media only screen and (max-width: 720px) {
+  header nav { width: 40%;}
+}
+
+/* media query for 720px ends here */
+
+/* media query for 425px starts here */
+
+@media only screen and (max-width: 426px) {
+  header nav { width: 50%;}
+}
+
+/* media query for 425px ends here */
+
 /*=================================
 Header styling ends here
 =================================*/ 

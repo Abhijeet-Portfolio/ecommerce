@@ -5,7 +5,7 @@ import '../assets/css/App.css';
 
 const App = () => {
 
-  const cartCount = useSelector(state => state.cart);
+  const cartCount = useSelector(state => state.cart.array);
   
   return (
     <div className="App">
@@ -16,7 +16,7 @@ const App = () => {
             <Link to='/' className='link'>Products</Link>
             <Link to='/contact' className='link'>Contact</Link>
             <div>
-              {cartCount > 0 ? <div className='count'>{cartCount}</div> : null}
+              {cartCount.length > 0 ? <div className='count'>{cartCount.length}</div> : null}
               <img src={cart} alt="Cart" />
             </div>
           </nav>

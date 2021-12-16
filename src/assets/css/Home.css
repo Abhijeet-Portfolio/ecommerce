@@ -127,4 +127,40 @@
 .home .products .add-cart button:hover {background-color: #034e00;}
 .home .products .add-cart .remove:hover { color: #f5f5f5;}
 
+/* media query for 1024px starts here */
+
+@media only screen and (max-width: 1024px) {
+    .home .sort button { width: 20%;}
+}
+
+/* media query for 1024px ends here */
+
+/* media query for 720px starts here */
+
+@media only screen and (max-width: 720px) {
+    .home .sort button { width: 30%;}
+
+    .home .products li {
+        width: 80%;
+        margin: 14px auto;
+    }
+}
+
+/* media query for 720px ends here */
+
+/* media query for 425px starts here */
+
+@media only screen and (max-width: 426px) {
+
+    .home .available-products h2 { width: 50%;}
+    .home .sort button { width: 50%;}
+
+    .home .products li {
+        width: 98%;
+        margin: 14px auto;
+    }
+}
+
+/* media query for 425px ends here */
+
 /* Home styling ends here */
