@@ -10,6 +10,9 @@ const ContactForm = () => {
   const users = useSelector(state => state.user);
   
   const [modal, setModal] = useState(false);
+  const [fname, setfname] = useState('');
+  const [email, setemail] = useState('');
+  const [phone, setphone] = useState('');
   const [nameError, setnameError] = useState(null);
   const [emailError, setemailError] = useState(null);
   const [phoneError, setphoneError] = useState(null);
@@ -18,50 +21,45 @@ const ContactForm = () => {
     if (value === "") setnameError("This field is Requied!");
     else if (/[^a-zA-Z\s]/.test(value))
       setnameError("This field should includes Alphabets");
-    else if (!/^[^\s]+(\s+[^\s]+)*$/.test(value))
-      setnameError("Full name should not start and end with space");
-    else if (/[^\s]([ ]{2,})[^\s]/.test(value))
-      setnameError("No 2 space between Words");
-    else setnameError(null);
+    else {
+      setnameError(null);
+      setfname(value.replace(/\s+/g, ' ').trim());
+    }
   };
 
   const validateEmail = (value) => {
     if (value === "") setemailError("This field is Required!");
     else if (!/\S+@\S+\.\S+/.test(value))
       setemailError("This field should includes @ and .");
-    else if (/[\s]/.test(value))
-      setemailError("This field should not includes Space");
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
       setemailError("This should not includes two @ symbol");
-    else setemailError(null);
+    else {
+      setemailError(null);
+      setemail(value.replace(/\s+/g, '').trim());
+    }
   };
 
   const validatePhone = (value) => {
     if (value === "") setphoneError("This field is required!");
-    else if (/[^0-9]/.test(value))
+    else if (/[\D]/.test(value))
       setphoneError("This field should includes Only digits");
     else if (value.length < 10) setphoneError("It should 10 digit Number");
-    else setphoneError(null);
+    else {
+      setphoneError(null);
+      setphone(value);
+    }
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (
-      e.target[0].value === "" ||
-      e.target[1].value === "" ||
-      e.target[2].value === ""
-    ) {
-      if (e.target[0].value === "") setnameError("This field is required");
-      if (e.target[1].value === "") setemailError("This field is required");
-      if (e.target[2].value === "") setphoneError("This field is required");
+    if ( fname === "" || email === "" || phone === "" ) {
+      if (fname === "") setnameError("This field is required");
+      if (email === "") setemailError("This field is required");
+      if (phone === "") setphoneError("This field is required");
     } else if (nameError || emailError || phoneError) return;
     else {
       setModal(true);
-      dispatch(addUser({
-        name: e.target[0].value,
-        email: e.target[1].value,
-        phone: e.target[2].value
-      }))
+      dispatch(addUser({fname,email,phone}));
       e.target.reset();
     }
   };
