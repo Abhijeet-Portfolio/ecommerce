@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import cart from '../assets/images/Cart.svg';
-import '../assets/css/App.css';
+import '../assets/css/Header.css';
 
-const App = () => {
+const Header = () => {
 
   const cartCount = useSelector(state => state.cart.array);
   
@@ -13,8 +13,8 @@ const App = () => {
         <div className="wrapper">
           <h1>E-Commerce</h1>
           <nav>
-            <Link to='/' className='link'>Products</Link>
-            <Link to='/contact' className='link'>Contact</Link>
+            <NavLink to='/' className="link">Products</NavLink>
+            <NavLink to='/contact' className="link">Contact</NavLink>
             <div>
               {cartCount.length > 0 ? <div className='count'>{cartCount.length}</div> : null}
               <img src={cart} alt="Cart" />
@@ -26,4 +26,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Header;

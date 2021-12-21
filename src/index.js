@@ -8,7 +8,7 @@ import "./assets/css/index.css";
 import Home from "./component/Home";
 import ContactForm from "./component/ContactForm";
 import allReducers from "./reducers";
-import App from "./component/App";
+import Header from "./component/Header";
 import reportWebVitals from "./reportWebVitals";
 
 const store = createStore(allReducers, applyMiddleware(reduxThunk));
@@ -17,7 +17,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Provider store={store}>
-        <App />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactForm />} />
