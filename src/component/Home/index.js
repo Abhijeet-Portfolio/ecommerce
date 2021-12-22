@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProduct } from "../actions";
-import Loader from "./Loader";
-import DisplayProduct from "./DisplayProduct";
-import '../assets/css/Home.css'
+import { fetchProduct } from "../../actions";
+import Loader from "../Loader";
+import DisplayProduct from "../DisplayProduct";
+import './Home.css'
 
 const Home = () => {
 

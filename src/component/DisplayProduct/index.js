@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement } from "../actions";
+import { increment, decrement } from "../../actions";
 
 const DisplayProduct = ({ product, sortValue }) => {
   

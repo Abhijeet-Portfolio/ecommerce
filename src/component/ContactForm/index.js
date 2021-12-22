@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addUser } from "../actions";
-import FormGroup from "./FormGroup";
-import "../assets/css/ContactForm.css";
+import { addUser } from "../../actions";
+import FormGroup from "../FormGroup";
+import "./ContactForm.css";
 
 const ContactForm = () => {
 
@@ -46,6 +46,7 @@ const ContactForm = () => {
     else if (value.length < 10) setphoneError("It should 10 digit Number");
     else {
       setphoneError(null);
+      console.log(value);
       setphone(value);
     }
   };
