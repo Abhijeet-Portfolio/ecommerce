@@ -9,6 +9,7 @@ import Home from "./component/Home";
 import ContactForm from "./component/ContactForm";
 import allReducers from "./reducers";
 import Header from "./component/Header";
+import Login from "./component/Login";
 import reportWebVitals from "./reportWebVitals";
 
 const store = createStore(allReducers, applyMiddleware(reduxThunk));
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactForm />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Provider>
     </Router>

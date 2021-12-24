@@ -1,5 +1,7 @@
 /* Home styling starts here */
 
+.home { z-index: 1;}
+
 .home .available-products {
     padding: 12px 0 10px;
     display: flex;
