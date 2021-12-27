@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const LoginDiv = styled.div`
-  width: 12%;
+  width: 18%;
   display: flex;
   justify-content: center;
 
   & > button {
-    width: 90%;
-    padding: 7px 0 5px;
+    width: 100%;
+    padding: 12px 0 10px;
     border: 0;
+    border-radius: 20px;
     background-color: #fff;
     color: #0d083a;
     font-size: 11px;

@@ -53,15 +53,17 @@ const Header = () => {
                 </ul>
               ) : null}
             </div>
-            <NavLink to='/' className="link">Products</NavLink>
-            <NavLink to='/contact' className="link">Contact</NavLink>
-            <NavLink to='/cart' className='cart'>
-              <div className='count'>{cartCount.length}</div>
-              <img src={cart} alt="Cart" />
-            </NavLink>
-            <LoginDiv>
-              {loginData.loginStatus ? <LoginData data={loginData.detail} userLogout={() => dispatch(logout())} /> : <button onClick={() => setLoginModal(true)}>login</button>}
-            </LoginDiv>
+            <div className='navigation'>
+              <NavLink to='/' className="link">Products</NavLink>
+              <NavLink to='/contact' className="link">Contact</NavLink>
+              <NavLink to='/cart' className='cart'>
+                <div className='count'>{cartCount.length}</div>
+                <img src={cart} alt="Cart" />
+              </NavLink>
+              <LoginDiv>
+                {loginData.loginStatus ? <LoginData data={loginData.detail} userLogout={() => dispatch(logout())} /> : <button onClick={() => setLoginModal(true)}>login</button>}
+              </LoginDiv>
+            </div>
           </nav>
           {loginFormMadal ? <Login close={() => setLoginModal(false)} /> : null}
           {searchData ? <SearchModal data={searchData} close={() => setSearchData(null)} /> : null}
