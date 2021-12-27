@@ -40,3 +40,16 @@ export const addUser = value => {
         payload: value
     }
 }
+
+export const login = detail => {
+    return {
+        type: 'LOGIN',
+        payload: detail
+    }
+}
+
+export const logout = () => {
+    return {
+        type: 'LOGOUT'
+    }
+}

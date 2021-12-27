@@ -1,6 +1,7 @@
 .loader-wrapper { 
   width: 100%;
   margin: 150px auto;
+  z-index: -1;
 }
 
 .lds-spinner {

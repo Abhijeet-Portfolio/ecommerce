@@ -1,0 +1,14 @@
+/* Cart styling starts Here*/
+
+.cart-section {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.cart-section h2 {
+    font-size: 35px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Cart styling ends Here*/

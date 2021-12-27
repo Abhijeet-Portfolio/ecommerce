@@ -1,5 +1,35 @@
 /* Home styling starts here */
 
+.home { 
+    padding-top: 50px;
+    z-index: 1;
+}
+
+.home .slick-slider { z-index: 1; }
+
+.home .slick-next,
+.home .slick-prev {
+    width: 31px;
+    height: 31px;
+    opacity: 0.5;
+}
+
+.home .slick-next:hover,
+.home .slick-prev:hover { opacity: 1;}
+
+.home .slick-prev {
+    left: 1%;
+    z-index: 2;
+}
+
+.home .slick-next { right: 1%; }
+
+.home .slick-prev::before,
+.home .slick-next::before {
+    color: #0d045c;
+    font-size: 35px;    
+}
+
 .home .available-products {
     padding: 12px 0 10px;
     display: flex;
