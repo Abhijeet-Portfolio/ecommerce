@@ -1,7 +1,7 @@
 /* Home styling starts here */
 
 .home { 
-    padding-top: 50px;
+    padding-top: 60px;
     z-index: 1;
 }
 
@@ -40,7 +40,7 @@
 .home .available-products h2 {
     width: 30%;
     padding: 5px 0;
-    border-bottom: 3px solid #000000;
+    border-bottom: 3px solid #000;
     font-size: 22px;
     font-weight: 500;
 }
@@ -72,7 +72,7 @@
     border: 1px solid #88888890;
     margin: 14px 0;
     display: flex;
-    background-color: #ffffff;
+    background-color: #fff;
     box-shadow: 0 0 8px 1px #aaaaaaa2;
     justify-content: space-between;
     align-items: center;
@@ -86,6 +86,8 @@
 
 @media only screen and (max-width: 720px) {
     
+    .home { padding-top: 100px;}
+
     .home .products li {
         width: 80%;
         margin: 14px auto;
@@ -98,6 +100,7 @@
 
 @media only screen and (max-width: 426px) {
 
+    .home { padding-top: 155px;}
     .home .available-products h2 { width: 50%;}
 
     .home .products li {
