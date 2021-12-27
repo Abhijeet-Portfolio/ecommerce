@@ -9,7 +9,7 @@
 }
 
 header { 
-  padding: 10px 0 12px;
+  padding: 14px 0 15px;
   background-color: #0d083a;
   color: #f5f5f5;
 }
@@ -20,10 +20,10 @@ header .wrapper {
   align-items: center;
 }
 
-header h1 { font-size: 22px; }
+header h1 { font-size: 28px; }
 
 header nav { 
-  width: 50%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,8 +35,9 @@ header nav .search {
 }
 
 header nav form { 
+  box-sizing: border-box;
   width: 100%; 
-  border-radius: 5px;
+  border-radius: 20px;
   background-color: #f5f5f5;
   position: relative;
 }
@@ -51,15 +52,16 @@ header nav input {
   box-sizing: border-box;
   width: 95%;
   min-height: 100%;
-  padding: 5px 2%;
+  padding: 8px 2% 7px;
   border: 0;
   background-color: transparent;
   outline: none;
+  font-size: 1.1em;
 }
 
 header nav .form-group::after {
   content: '';
-  width: 5%;
+  width: 4%;
   min-height: 100%;
   margin-right: 2%;
   background-image: url('../../assets/images/search-solid.svg');
@@ -99,8 +101,15 @@ header nav .search-result li:hover {
   color: #f5f5f5;
 }
 
+header nav .navigation {
+  width: 32%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header nav .cart {
-  width: 5%;
+  width: 10%;
   position: relative;
 }
 
@@ -108,21 +117,30 @@ header nav .cart img { width: 80%; }
 
 header nav .count {
   width: 50%;
-  padding: 0;
+  padding: 0 0 1px;
   border-radius: 30%;
   position: absolute;
   top: 0;
   right: 1%;
   background-color: #eb3737;
-  color: #eeeeee;
+  color: #eee;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.8em;
 }
 
-header nav > div img { width: 70%;}
-header nav .link { color: #eeeeee; }
-header nav .link .active { border-bottom: 1px solid #f5f5f5;}
-header nav .link:hover { border-bottom: 1px solid #f5f5f5;}
+header .navigation > div img { width: 95%;}
+header nav .link { color: #eee; }
+header .navigation .link .active { border-bottom: 1px solid #f5f5f5;}
+header .navigation .link:hover { border-bottom: 1px solid #f5f5f5;}
+
+/* media query for 1024px starts here */
+
+@media only screen and (max-width: 1024px) {
+  header nav { width: 70%;}
+  header nav .navigation { width: 48%;}
+}
+
+/* media query for 1024px ends here */
 
 /* media query for 720px starts here */
 
@@ -144,6 +162,15 @@ header nav .link:hover { border-bottom: 1px solid #f5f5f5;}
     width: 95%;
     flex-wrap: wrap;
   }
+
+  header nav { 
+    flex-direction: column-reverse; 
+    margin-top: 10px;
+    min-height: 80px;
+  }
+
+  header nav .search { width: 100%;}
+  header nav .navigation { width: 100%;}
 }
 
 /* media query for 425px ends here */

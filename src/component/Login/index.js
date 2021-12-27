@@ -10,7 +10,7 @@ import {
   FormWrapper,
 } from "./login.style";
 
-const Login = (props) => {
+const Login = ({close}) => {
 
   const [userName, setUserName] = useState("");
   const [errorusername, seterroruser] = useState(null);
@@ -33,7 +33,7 @@ const Login = (props) => {
           dispatch(login(element));
           seterroruser(null);
           seterrorpassword(null);
-          props.close();
+          close();
         }
         seterrorpassword("Incorrect Password");
         seterroruser(null)
@@ -48,7 +48,7 @@ const Login = (props) => {
 
   return (
     <FormWrapper>
-      <FigureClose onClick={props.close}>
+      <FigureClose onClick={close}>
         <img src={times} alt="close" />
       </FigureClose>
       <Form>
