@@ -69,7 +69,6 @@ const Header = () => {
 }
 
 const LoginData = ({data,userLogout}) => {
-  console.log(data);
   return (
     <div>
       <img src={avatar} alt={data.fname} />

@@ -39,8 +39,8 @@ const Home = () => {
     
     return (
         <section className="home">
-            <ImageSlider />
             <div className="wrapper">
+                <ImageSlider />
                 <div className='available-products'>
                     <h2>Available Products</h2>
                     <div className="sort">

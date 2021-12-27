@@ -5,7 +5,7 @@ export const FigureClose = styled.figure`
     position: absolute;
     top: 150px;
     right: 33%;
-
+    z-index: 100;
 `
 
 export const FormWrapper = styled.div`
