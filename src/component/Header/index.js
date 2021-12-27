@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProduct, logout } from '../../actions';
 import Login from '../Login';
+import SearchModal from '../SearchModal';
 import { LoginDiv, UserDiv } from './header.style';
 import cart from '../../assets/images/Cart.svg';
 import avatar from '../../assets/images/user-avatar.svg';
@@ -15,6 +16,7 @@ const Header = () => {
   const loginData = useSelector(state => state.login);
   const [searchArray, setSearchArray] = useState([]);
   const [loginFormMadal, setLoginModal] = useState(false);
+  const [searchData, setSearchData] = useState(null);
   const dispatch = useDispatch();
 
   const userlogin = {
@@ -47,7 +49,7 @@ const Header = () => {
               </form>
               {searchArray.length !== 0 ? (
                 <ul className="search-result">
-                  {searchArray.map(product => <li key={product.id} onClick={() => console.log(product.id)}>{product.title}</li>)}
+                  {searchArray.map(product => <li key={product.id} onClick={() => setSearchData(product)}>{product.title}</li>)}
                 </ul>
               ) : null}
             </div>
@@ -61,7 +63,8 @@ const Header = () => {
               {loginData.loginStatus ? <LoginData data={loginData.detail} userLogout={() => dispatch(logout())} /> : <button onClick={() => setLoginModal(true)}>login</button>}
             </LoginDiv>
           </nav>
-          {loginFormMadal ? <Login close={() => setLoginModal(false)} /> : null}     
+          {loginFormMadal ? <Login close={() => setLoginModal(false)} /> : null}
+          {searchData ? <SearchModal data={searchData} close={() => setSearchData(null)} /> : null}
         </div>
       </header>
     </div>

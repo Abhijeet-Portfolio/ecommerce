@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../../actions";
+import './displayProduct.css';
 
-const DisplayProduct = ({ product, sortValue }) => {
+const DisplayProduct = ({ product }) => {
   
   const cart = useSelector((state) => state.cart.array);
   const dispatch = useDispatch();
@@ -14,10 +15,7 @@ const DisplayProduct = ({ product, sortValue }) => {
       <div>
         <h4>{product.title}</h4>
         <div>
-          <span>Category : </span>{" "}
-          <button onClick={() => sortValue(product.category)}>
-            {product.category}
-          </button>
+          <span>Category : {product.category}</span>
         </div>
         <h5>&#8377; {product.price}</h5>
         <div className="add-cart">
