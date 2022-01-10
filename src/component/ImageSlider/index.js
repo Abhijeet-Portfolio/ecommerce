@@ -18,13 +18,13 @@ const ImageSlider = () => {
   return (
     <Slider {...settings}>
       <BannerFigure>
-        <img src={image1} alt="" />
+        <img src={image1} alt="smart clothing" />
       </BannerFigure>
       <BannerFigure>
-        <img src={image2} alt="" />
+        <img src={image2} alt="latest collections" />
       </BannerFigure>
       <BannerFigure>
-        <img src={image3} alt="" />
+        <img src={image3} alt="lovepik" />
       </BannerFigure>
     </Slider>
   );
