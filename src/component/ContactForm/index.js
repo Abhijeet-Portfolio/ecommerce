@@ -46,7 +46,6 @@ const ContactForm = () => {
     else if (value.length < 10) setphoneError("It should 10 digit Number");
     else {
       setphoneError(null);
-      console.log(value);
       setphone(value);
     }
   };

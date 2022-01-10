@@ -1,9 +1,9 @@
-const FormGroup = (props) => {
+const FormGroup = ({name,error,value,maxlength}) => {
   return (
     <div className="form-group">
-      <label>{props.name} : </label>
-      {props.error ? <span>{props.error}</span> : null}
-      <input type="text" onBlur={props.value} maxLength={props.maxlength} />
+      <label>{name} : </label>
+      {error ? <span>{error}</span> : null}
+      <input type="text" onBlur={value} maxLength={maxlength} />
     </div>
   );
 };
